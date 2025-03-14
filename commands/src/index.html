@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="monetag" content="41bb5206c6bd52ac36a3c345f243c9b5">
+  <title>Discord Verification</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #000; /* Set background color to jet black */
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    form {
+      max-width: 400px;
+      width: 100%;
+      padding: 20px;
+      background: #fff; /* White background for the form */
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 0.5s ease;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      color: #333;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #000; /* Set button background color to black */
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #333; /* Darken button on hover */
+    }
+
+    .success-message {
+      font-size: 24px;
+      text-align: center;
+      margin-top: 20px;
+      color: white;
+      display: none; /* Initially hidden */
+    }
+  </style>
+</head>
+<body>
+  <h2>Chonk Discord Verification</h2>
+<form action="/addUser" method="post" id="verificationForm" onsubmit="return verifyTurnstile()">
+    <label for="username">Discord Username:</label>
+    <input type="text" id="username" name="username" required>
+    <button type="submit">Register</button>
+    <div class="success-message" id="successMessage">Successfully Verified</div>
+  </form>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?compat=recaptcha" async defer></script>
+  <script type="text/javascript">
+    async function verifyTurnstile() {
+      // Trigger Turnstile verification
+      const turnstileResponse = await new Promise(resolve => {
+        Turnstile.turnstileRequest({
+          sitekey: '0x4AAAAAAASusnbAFpvCB-V8', // Replace with your Turnstile site key
+          action: 'verify', // Action to verify
+          callback: resolve
+        });
+      });
+
+      // Check if Turnstile verification was successful
+      if (turnstileResponse.success) {
+        // Proceed with form submission
+        return true;
+      } else {
+        // Display error message or handle failed verification
+        alert('Turnstile verification failed. Please try again.');
+        return false;
+      }
+    }
+  </script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon='{"rayId":"85ba0b6a58d665ff","version":"2024.2.1","r":1,"token":"d0ef526f68b94d838a8bf023078b1e60","b":1}' crossorigin="anonymous"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon='{"rayId":"85ca77ad78d119aa","version":"2024.2.1","r":1,"token":"d0ef526f68b94d838a8bf023078b1e60","b":1}' crossorigin="anonymous"></script>
+</body>
+</html>
