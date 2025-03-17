@@ -1,0 +1,74 @@
+{
+    "token": "YOUR_TOKEN",
+    "clientId":"1204511780525838347",
+    "guildId":"1204421799052578816",
+    "prefix": ".",
+    "color": {
+        "default": "#5865F2",
+        "red": "#ED4245",
+        "green": "#57F287",
+        "yellow": "#FEE75C"
+    },
+    "debug": false, 
+    "servername": "server name",
+    "genChannel": "0000000000000000000",
+    "pgenChannel": "1228230257497079899",
+    "bgenChannel": "1228230254997274635",
+    "egenChannel": "1228230259560812544",
+    "fgenChannel": "1228230253218889772",
+    "cgenChannel": "1228230256419143741",
+    "redeemChannel": "1158002836697776148",
+    "accountSubmitChannel": "1228230313541632070",
+    "vouchChannel": "1228230248730984468",
+    "myvouchChannel": "1228230305115148362",
+    "plsChannel": "1158002836697776148",
+    "ownerandcoownerChannel": "1228230311176044554",
+    "staffcmdChannel": "1228230305115148362",
+    "PromotionChannel": "1228230302971859025",
+    "dropChannel":"1228230247275696159",
+    "MarketPlaceSellerChannel":"1228230213444309052",
+    "CheckerAccess": "1228230175226073109",
+    "tokenChannel": "1181705948704817273",
+    "extremepayout":"1228230313541632070",
+    "genCooldown": "120000",
+    "genCooldownsec": "600",
+    "egenCooldownsec": "259200000",
+    "bgenCooldownsec": "3600",
+    "fgenCooldownsec": "7200",
+    "pgenCooldownsec": "1800",
+    
+    
+    "logChannel": "1228230300535099413",
+
+
+    
+    "inactiveChannel" : "1228230306713174116",
+
+    "Owners": [
+    "1025298243267072070",
+    "1066678171950387230"
+  ],
+    "Admin":"1228230166279356476",
+    "Coowner": "1228230164476067911",
+    "Mods":"1228230170247430185",
+    "HighCommandStaff" : "1228230171472166922",
+    "Headstaff": "1228230173686501451",
+    "SeniorStaff": "1228230176035569685",
+    "JuniorStaff": "1228230177100795924", 
+    "TrailStaff":"1228230178199834675",
+ 
+    "Member" : "1228230185761902602",
+    "MarketPlaceSeller":"1228230179562721370",
+
+    "vouchCooldown": 900000,
+    "command": {
+        "notfound_message": false,
+        "error_message": false,
+        "blocked_channels": [
+            {
+                "channel_id": "1228230268641607710",
+                "disable_errors": true
+            }
+        ]
+    }
+}
