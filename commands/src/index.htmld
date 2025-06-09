@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap">
+<title>Chonk Discord Verification</title>
+<style>
+  body {
+    background-color: #151515;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Inter', sans-serif; 
+  }
+  #container {
+    width: 410px;
+    height: 448px;
+    background-color: #222222;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    padding: 20px;
+  }
+  #circle {
+    width: 133.51px;
+    height: 129.71px;
+    background-color: #ffffff; 
+    background-image: url('chonk_dev.png');
+    background-size: cover; 
+    border-radius: 50%;
+    margin-bottom: 36px; 
+  }
+  input[type="text"] {
+    width: 264px;
+    height: 40px;
+    margin-bottom: 36px; 
+    border-radius: 9px;
+    padding-left: 30px;
+  }
+
+  h3{
+    color: #ffffff;
+    margin-bottom: 36px; 
+  }
+  #registration-button {
+    width: 159px;
+    height: 37px;
+    background-color: #7A23AB;
+    display: inline-block;
+    margin-bottom: 36px; 
+    text-align: center;
+    line-height: 37px;
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 6px;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+  .user-image {
+    width: 13px;
+    height: 13px;
+    position: absolute;
+    left: 12px; 
+    top: 16px;
+  }
+</style>
+</head>
+<body>
+<div id="container">
+  <h3>Chonk Discord Verification</h3>
+  <div id="circle"></div>
+  <form id="verificationForm" action="http://verify.chonkgen.com:30009/addUser" method="post">
+    <input id="discordUsername" type="text" placeholder="Enter Discord Username">
+    <img src="user.png" class="user-image">
+    <div id="registration-button" onclick="submitForm()">Registration</div>
+  </form>
+</div>
+
+<script>
+  function submitForm() {
+    var discordUsername = document.getElementById('discordUsername').value;
+    if (discordUsername.trim() !== '') {
+      document.getElementById('verificationForm').submit();
+    } else {
+      alert('Please enter your Discord username.');
+    }
+  }
+</script>
+</body>
+</html>
